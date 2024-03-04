@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* background: #333; */
+    color: black;
+    height: 100vh;
+    place-content: center;
+    display: grid;
+}
+
+#parent {
+    border: solid #333 3px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas:
+    "a . c"
+    ". . ."
+    ". b ."
+}
+
+section.chart {
+    border: solid #333;
+    position: relative;
+}
+
+div.overlay,
+section.chart img {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left:0;
+    right: 0;
+}
+
+section.chart img {
+    height: 100%;
+    width: 100%;
+}
+
+div.overlay {
+    background: white;
+    dispay: grid;
+    opacity: 0.2;
+    place-content: center;
+    text-align: center;
+}
+
+p {
+    margin-top: 19%;
+    color: red;
+}
+
+section.chart.a {
+    grid-area: a;
+    border: solid red;
+}
+
+section.chart.b {
+    grid-area: b;
+    border: solid blue;
+}
+
+section.chart.c {
+    grid-area: c;
+    border: solid green;
+}
+
+
